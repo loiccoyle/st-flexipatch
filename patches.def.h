@@ -14,7 +14,7 @@
  * when including this patch.
  * https://st.suckless.org/patches/alpha/
  */
-#define ALPHA_PATCH 0
+#define ALPHA_PATCH 1
 
 /* Adds gradient transparency to st, depends on the alpha patch.
  * https://st.suckless.org/patches/gradient/
@@ -24,7 +24,7 @@
 /* This patch allows st to reize to any pixel size rather than snapping to character width/height.
  * https://st.suckless.org/patches/anysize/
  */
-#define ANYSIZE_PATCH 0
+#define ANYSIZE_PATCH 1
 
 /* This patch aims to prevent black bars being drawn on the edges of st terminals using the anysize
  * patch. This generally only occurs when the terminal background color doesn't match the colors
@@ -33,24 +33,24 @@
  * terminal resizes.)
  * https://github.com/connor-brooks/st-anysize-nobar
  */
-#define ANYSIZE_NOBAR_PATCH 0
+#define ANYSIZE_NOBAR_PATCH 1
 
 /* By default bold text is rendered with a bold font in the bright variant of the current color.
  * This patch makes bold text rendered simply as bold, leaving the color unaffected.
  * https://st.suckless.org/patches/bold-is-not-bright/
  */
-#define BOLD_IS_NOT_BRIGHT_PATCH 0
+#define BOLD_IS_NOT_BRIGHT_PATCH 1
 
 /* This patch adds dustom rendering of lines/blocks/braille characters for gapless alignment.
  * https://st.suckless.org/patches/boxdraw/
  */
-#define BOXDRAW_PATCH 0
+#define BOXDRAW_PATCH 1
 
 /* By default st only sets PRIMARY on selection.
  * This patch makes st set CLIPBOARD on selection.
  * https://st.suckless.org/patches/clipboard/
  */
-#define CLIPBOARD_PATCH 0
+#define CLIPBOARD_PATCH 1
 
 /* Select and copy the last URL displayed with Mod+l. Multiple invocations cycle through the
  * available URLs.
@@ -82,12 +82,12 @@
 /* This patch makes the cursor color the inverse of the current cell color.
  * https://st.suckless.org/patches/dynamic-cursor-color/
  */
-#define DYNAMIC_CURSOR_COLOR_PATCH 0
+#define DYNAMIC_CURSOR_COLOR_PATCH 1
 
 /* Reading and writing st's screen through a pipe, e.g. pass info to dmenu.
  * https://st.suckless.org/patches/externalpipe/
  */
-#define EXTERNALPIPE_PATCH 0
+#define EXTERNALPIPE_PATCH 1
 
 /* This patch improves and extends the externalpipe patch in two ways:
  *    - it prevents the reset of the signal handler set on SIGCHILD, when
@@ -111,7 +111,7 @@
  * that are available to GUI applications.
  * https://st.suckless.org/patches/fix_keyboard_input/
  */
-#define FIXKEYBOARDINPUT_PATCH 0
+#define FIXKEYBOARDINPUT_PATCH 1
 
 /* This patch allows you to add spare font besides the default. Some glyphs can be not present in
  * the default font. For this glyphs st uses font-config and try to find them in font cache first.
@@ -119,7 +119,7 @@
  * So they will be used first for glyphs that are absent in the default font.
  * https://st.suckless.org/patches/font2/
  */
-#define FONT2_PATCH 0
+#define FONT2_PATCH 1
 
 /* Hide the X cursor whenever a key is pressed and show it back when the mouse is moved in
  * the terminal window.
@@ -143,7 +143,7 @@
 /* This patch allows you to select text on the terminal using keyboard shortcuts.
  * https://st.suckless.org/patches/keyboard_select/
  */
-#define KEYBOARDSELECT_PATCH 0
+#define KEYBOARDSELECT_PATCH 1
 
 /* This patch adds support for drawing ligatures using the Harfbuzz library to transform
  * original text of a single line to a list of glyphs with ligatures included.
@@ -166,7 +166,7 @@
  * same CWD (current working directory) as the original st instance.
  * https://st.suckless.org/patches/newterm/
  */
-#define NEWTERM_PATCH 0
+#define NEWTERM_PATCH 1
 
 /* Open contents of the clipboard in a user-defined browser.
  * https://st.suckless.org/patches/open_copied_url/
@@ -188,19 +188,19 @@
 /* Scroll back through terminal output using Shift+{PageUp, PageDown}.
  * https://st.suckless.org/patches/scrollback/
  */
-#define SCROLLBACK_PATCH 0
+#define SCROLLBACK_PATCH 1
 
 /* Scroll back through terminal output using Shift+MouseWheel.
  * This variant depends on SCROLLBACK_PATCH being enabled.
  * https://st.suckless.org/patches/scrollback/
  */
-#define SCROLLBACK_MOUSE_PATCH 0
+#define SCROLLBACK_MOUSE_PATCH 1
 
 /* Scroll back through terminal output using mouse wheel (when not in MODE_ALTSCREEN).
  * This variant depends on SCROLLBACK_PATCH being enabled.
  * https://st.suckless.org/patches/scrollback/
  */
-#define SCROLLBACK_MOUSE_ALTSCREEN_PATCH 0
+#define SCROLLBACK_MOUSE_ALTSCREEN_PATCH 1
 
 /* This is the single drawable buffer patch as outlined in the FAQ to get images
  * in w3m to display. While this patch does not break the alpha patch it images
@@ -226,7 +226,7 @@
  *
  * https://gist.github.com/saitoha/70e0fdf22e3e8f63ce937c7f7da71809
  */
-#define SIXEL_PATCH 0
+#define SIXEL_PATCH 1
 
 /* This patch allows clients to embed into the st window and is useful if you tend to
  * start X applications from the terminal. For example:
@@ -270,7 +270,7 @@
  * https://github.com/Dreomite/st/commit/e3b821dcb3511d60341dec35ee05a4a0abfef7f2
  * https://www.reddit.com/r/suckless/comments/jt90ai/update_support_for_proper_glyph_rendering_in_st/
  */
-#define WIDE_GLYPHS_PATCH 0
+#define WIDE_GLYPHS_PATCH 1
 
 /* There is a known issue that Google's Variable Fonts (VF) can end up with letter spacing
  * that is too wide in programs that use Xft, for example Inconsolata v3.000.
@@ -285,10 +285,10 @@
 /* This patch allows user to specify the initial path st should use as the working directory.
  * https://st.suckless.org/patches/workingdir/
  */
-#define WORKINGDIR_PATCH 0
+#define WORKINGDIR_PATCH 1
 
 /* This patch adds the ability to configure st via Xresources. At startup, st will read and
  * apply the resources named in the resources[] array in config.h.
  * https://st.suckless.org/patches/xresources/
  */
-#define XRESOURCES_PATCH 0
+#define XRESOURCES_PATCH 1

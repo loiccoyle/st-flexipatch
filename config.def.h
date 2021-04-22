@@ -5,12 +5,12 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "mono:pixelsize=14:antialias=true:autohint=true";
 #if FONT2_PATCH
 /* Spare fonts */
 static char *font2[] = {
 /*	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
-/*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
+	"Noto Color Emoji:pixelsize=11:antialias=true:autohint=true",
 };
 #endif // FONT2_PATCH
 
@@ -123,7 +123,7 @@ unsigned int tabspaces = 8;
 
 #if ALPHA_PATCH
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 0.92;
 #if ALPHA_GRADIENT_PATCH
 float grad_alpha = 0.54; //alpha value that'll change
 float stat_alpha = 0.46; //constant alpha value that'll get added to grad_alpha
