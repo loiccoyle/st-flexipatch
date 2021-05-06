@@ -300,9 +300,13 @@ static MouseShortcut maltshortcuts[] = {
 #define TERMMOD (ControlMask|ShiftMask)
 
 #if EXTERNALPIPE_PATCH // example command
-static char *openurlcmd[] = { "/bin/sh", "-c",
-	"xurls | dmenu -l 10 -w $WINDOWID | xargs -r open",
-	"externalpipe", NULL };
+/* static char *openurlcmd[] = { "/bin/sh", "-c", */
+/* 	"xurls | dmenu -l 10 -w $WINDOWID | xargs -r open", */
+/* 	"externalpipe", NULL }; */
+
+static char *openurlcmd[] = { "/bin/sh", "-c", "st-urlhandler -o", "externalpipe", NULL };
+static char *copyurlcmd[] = { "/bin/sh", "-c", "st-urlhandler -c", "externalpipe", NULL };
+static char *copyoutput[] = { "/bin/sh", "-c", "st-copyout", "externalpipe", NULL };
 #endif // EXTERNALPIPE_PATCH
 
 static Shortcut shortcuts[] = {
@@ -339,6 +343,8 @@ static Shortcut shortcuts[] = {
 	#endif // NEWTERM_PATCH
 	#if EXTERNALPIPE_PATCH
 	{ TERMMOD,              XK_U,           externalpipe,    { .v = openurlcmd } },
+	{ TERMMOD,              XK_L,           externalpipe,    { .v = copyurlcmd } },
+	{ TERMMOD,              XK_O,           externalpipe,    { .v = copyoutput } },
 	#endif // EXTERNALPIPE_PATCH
 	#if KEYBOARDSELECT_PATCH
 	{ TERMMOD,              XK_space,      keyboard_select, { 0 } },
