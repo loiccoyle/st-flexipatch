@@ -2594,6 +2594,8 @@ run:
 	if (opt_dir && chdir(opt_dir))
 		die("Can't change to working directory %s\n", opt_dir);
 	#endif // WORKINGDIR_PATCH
+	/* set starting appkeypad mode for consistency with termite, alacritty */
+	xsetmode(1, MODE_APPKEYPAD);
 	run();
 
 	return 0;
